@@ -3,7 +3,7 @@ const placeModel = require("../../models/Place");
 const router = express.Router();
 
 const reviewModel = require("../../models/Review");
-const userModel = require("../../models/User");
+const userModel = require("../models/User");
 
 function getAvgRating(arr) {
   if (arr.length !== 0) {

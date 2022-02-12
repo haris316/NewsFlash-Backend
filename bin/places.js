@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const placeModel = require("../../models/Place");
-const userModel = require("../../models/User");
+const userModel = require("../models/User");
 const transport = require('../../config/nodemailer')
 
 // Add place

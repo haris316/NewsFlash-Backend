@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    name: {
+    firstname: {
+        type: String,
+        required: true
+    },
+    lastname: {
         type: String,
         required: true
     },
@@ -16,17 +20,13 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         required: false,
-        enum: ["user", "admin"],
+        enum: ["user", "admin","company"],
         default:"user",
     },
     createdDate: {
         type: Date,
         required: true,
         default: Date.now
-    },
-    rewardPoints: {
-        type: Number,
-        default: 100
     },
     is_deleted: {
         type: Boolean,
