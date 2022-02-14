@@ -1,39 +1,57 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
+const newsPostSchema = require("./NewsPost");
+const newsArticleSchema = require("./NewsArticle");
 
 const userSchema = new mongoose.Schema({
-    firstname: {
-        type: String,
-        required: true
-    },
-    lastname: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    role: {
-        type: String,
-        required: false,
-        enum: ["user", "admin","company"],
-        default:"user",
-    },
-    createdDate: {
-        type: Date,
-        required: true,
-        default: Date.now
-    },
-    is_deleted: {
-        type: Boolean,
-        default: false
-    }
-})
+  firstname: {
+    type: String,
+    required: true,
+  },
+  lastname: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  avatar_url: {
+    type: String,
+    required: false,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  role: {
+    type: String,
+    required: false,
+    enum: ["user", "admin", "company"],
+    default: "user",
+  },
+  createdDate: {
+    type: Date,
+    required: true,
+    default: Date.now(),
+  },
+  is_deleted: {
+    type: Boolean,
+    default: false,
+  },
+  news_posts: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "newsPostSchema",
+  },
+  news_articles: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "newsArticleSchema",
+  },
+});
 
-const userModel = new mongoose.model('user', userSchema)
+const userModel = new mongoose.model("user", userSchema);
 
-module.exports = userModel
+module.exports = userModel;
