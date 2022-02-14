@@ -4,9 +4,6 @@ const passport = require("passport");
 const env = require("dotenv");
 env.config();
 const users = require("./routes/api/users");
-// const categories = require("./routes/api/categories");
-// const places = require("./routes/api/places");
-// const reviews = require("./routes/api/review");
 const admin = require("./routes/admin/admin");
 
 const app = express();
@@ -38,11 +35,8 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 app.use("/api/users", users);
-// app.use("/api/categories", categories);
-// app.use("/api/places", places);
-// app.use("/api/reviews", reviews);
 app.use("/admin", admin);
 
-const port = process.env.PORT;
+const port = 7000;
 
 app.listen(port, () => console.log("Server is live on port " + port));

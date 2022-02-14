@@ -29,6 +29,11 @@ const NewsPostSchema = new mongoose.Schema({
     required: false,
     default: [],
   },
+  createdDate: {
+    type: Date,
+    required: true,
+    default: Date.now(),
+  }
 });
 
 const NewsPostModel = new mongoose.model("news_post", NewsPostSchema);

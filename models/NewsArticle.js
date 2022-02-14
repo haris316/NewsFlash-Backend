@@ -19,6 +19,11 @@ const NewsArticleSchema = new mongoose.Schema({
     required: false,
     default: [],
   },
+  createdDate: {
+    type: Date,
+    required: true,
+    default: Date.now(),
+  },
   body:{
       type:String,
       required:true,

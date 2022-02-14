@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const HashtagSchema = require("./Hashtag");
 
 const categorySchema = {
   name: {
@@ -6,8 +7,13 @@ const categorySchema = {
     required: true,
   },
   hashtags: {
+    type: [mongoose.Schema.Types.ObjectId],
+    required: false,
+    ref:"HashtagSchema"
+  },
+  keywords: {
     type: [String],
-    required: true,
+    required: false,
   },
 };
 

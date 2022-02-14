@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const newsPostSchema = require("./NewsPost");
 const newsArticleSchema = require("./NewsArticle");
+const companySchema = require("./Company");
 
 const userSchema = new mongoose.Schema({
   firstname: {
@@ -49,6 +50,12 @@ const userSchema = new mongoose.Schema({
   news_articles: {
     type: [mongoose.Schema.Types.ObjectId],
     ref: "newsArticleSchema",
+  },
+  company: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "companySchema",
+    default:null,
+    required:false
   },
 });
 
