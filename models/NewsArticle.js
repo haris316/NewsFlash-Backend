@@ -2,88 +2,109 @@ const mongoose = require("mongoose");
 const UserSchema = require("./User");
 const CommentSchema = require("./Comment");
 const CategorySchema = require("./Category");
-const HashtagSchema = require("./Hashtag");
 const MediaSchema = require("./Media");
-const SentimentSchema = require("./Sentiment");
-const SocialSchema = require("./Social");
 const CompanySchema = require("./Company");
+const HashtagSchema = require("./Hashtag");
+
 
 const NewsArticleSchema = new mongoose.Schema({
-  author: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "UserSchema",
-    required:true
-  },
-  comments: {
-    type: [mongoose.Schema.Types.ObjectId],
-    required: false,
-    default: [],
-  },
-  createdDate: {
-    type: Date,
-    required: true,
-    default: Date.now(),
-  },
-  body:{
-      type:String,
-      required:true,
-  },
-  title:{
-    type:String,
-    required:true,
-},
-summary:{
-    type:String,
-    required:true,
-},
-  categories:{
-    type:[mongoose.Schema.Types.ObjectId],
-    ref:"CategorySchema",
-    required:false,
-},
-counts:{
-    type:[mongoose.Schema.Types.ObjectId],
-    ref:"CountSchema",
-    required:true
-},
-hashtags:{
-    type:[mongoose.Schema.Types.ObjectId],
-    ref:"HashtagSchema",
-    required:false
-},
-keywords:{
-    type:[String],
-    required:true,
-},
-search_string:{
-    type:String,
-    required:true,
-},
-links:{
-    type:[String],
-    required:false,
-},
-media:{
-    type:[mongoose.Schema.Types.ObjectId],
-    required:false,
-    ref:"MediaSchema"
-},
-sentiment:{
-    type:[mongoose.Schema.Types.ObjectId],
-    required:false,
-    ref:"SentimentSchema"
-},
-social:{
-    type:[mongoose.Schema.Types.ObjectId],
-    required:false,
-    ref:"SocialSchema"
-},
-company:{
-    type:[mongoose.Schema.Types.ObjectId],
-    required:false,
-    ref:"CompanySchema"
-},
-  
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "UserSchema",
+        required: true
+    },
+    comments: {
+        type: [mongoose.Schema.Types.ObjectId],
+        required: false,
+        default: [],
+        ref: "CommentSchema",
+    },
+    createdDate: {
+        type: Date,
+        required: true,
+        default: Date.now(),
+    },
+    body: {
+        type: String,
+        required: true,
+    },
+    title: {
+        type: String,
+        required: true,
+    },
+    summary: {
+        type: String,
+        required: true,
+    },
+    categories: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "CategorySchema",
+        required: false,
+    },
+    counts: {
+        charachters: { type: Number, default: 0, required: true },
+        sentences: { type: Number, default: 0, required: true },
+        paragraphs: { type: Number, default: 0, required: true },
+        words: { type: Number, default: 0, required: true }
+    },
+    hashtags: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "HashtagSchema",
+        required: false,
+        default:[]
+    },
+    keywords: {
+        type: [String],
+        required: true,
+    },
+    links: {
+        type: [String],
+        required: false,
+    },
+    media: {
+        type: [MediaSchema],
+        required: false,
+    },
+    sentiment: {
+        polarity: [{
+            type: { type: String, default: "", required: false },
+            score: { type: Number, default: 0, required: false }
+        }],
+
+    },
+    social: {
+        facebook_count: {
+            type: Number,
+            default: 0,
+            required: false,
+        },
+        google_count: {
+            type: Number,
+            default: 0,
+            required: false,
+        },
+        twitter_count: {
+            type: Number,
+            default: 0,
+            required: false,
+        },
+        reddit_count: {
+            type: Number,
+            default: 0,
+            required: false,
+        },
+        other_count: {
+            type: Number,
+            default: 0,
+            required: false,
+        }
+    },
+    company: {
+        type: [mongoose.Schema.Types.ObjectId],
+        required: false,
+        ref: "CompanySchema"
+    },
+
 });
 
 const NewsArticleModel = new mongoose.model("news_article", NewsArticleSchema);

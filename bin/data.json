@@ -1,991 +1,16 @@
 {
-    "author": {
-        "avatar_url": null,
-        "id": 966366,
-        "name": "Eddie Makuch"
-    },
-    "body": "Tencent, the Chinese internet giant, has invested in yet another video game studio. The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. Tencent owns 9.96 percent of Sumo Group as part of this deal. Terms of the investment were not disclosed any further.\"We are glad to invest in Sumo Group, a leading independent co-development studio,\" Tencent Games boss Steven Ma said. \"We look forward to supporting Sumo's growth and exploring collaborations with the Company to bring more interactive entertainment experiences to global audiences.\"Sumo Group CEO Carl Cavers said, \"We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities.\"This is just the latest gaming investment from Tencent. The company already completely owns or has a controlling interests in League of Legends studio Riot Games, Path of Exile creator Grinding Gear Games, and Clash of Clans developer Supercell. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately. Following Perwyn's initial investment in the company back in 2016, the company is growing in numerous ways. It now operates 10 studios in three countries and posted \u00a338 million ($49 million USD) in revenue for the latest year.Sumo Digital, which employs around 600 people and is among the largest development groups in the world, has worked on numerous high-profile projects over the years. In the past two years alone, it has contributed to the development of Hitman 2, Forza Horizon 4, Team Sonic Racing, and Crackdown 3. It is currently working on Dead Island 2, among other projects.Sumo owns seven studios in the UK in Sheffield, Nottingham, Newcastle, Leamington Spa, Warrington, Brighton, and Leeds. The company also has an office in Pune, India.",
-    "categories": [
-        {
-            "confident": true,
-            "id": "IAB3-11",
-            "level": 2,
-            "links": {
-                "_self": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB3-11",
-                "parent": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB3"
-            },
-            "score": 0.19,
-            "taxonomy": "iab-qag"
-        },
-        {
-            "confident": true,
-            "id": "IAB3",
-            "level": 1,
-            "links": {
-                "_self": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB3",
-                "parent": null
-            },
-            "score": 0.1,
-            "taxonomy": "iab-qag"
-        },
-        {
-            "confident": true,
-            "id": "IAB9",
-            "level": 1,
-            "links": {
-                "_self": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB9",
-                "parent": null
-            },
-            "score": 0.09,
-            "taxonomy": "iab-qag"
-        },
-        {
-            "confident": false,
-            "id": "IAB9-15",
-            "level": 2,
-            "links": {
-                "_self": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB9-15",
-                "parent": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB9"
-            },
-            "score": 0.06,
-            "taxonomy": "iab-qag"
-        },
-        {
-            "confident": false,
-            "id": "04019000",
-            "level": 2,
-            "links": {
-                "_self": "https://api.aylien.com/api/v1/classify/taxonomy/iptc-subjectcode/04019000",
-                "parent": "https://api.aylien.com/api/v1/classify/taxonomy/iptc-subjectcode/04000000"
-            },
-            "score": 0.07,
-            "taxonomy": "iptc-subjectcode"
-        }
-    ],
-    "characters_count": 2217,
-    "entities": {
-        "body": [
-            {
-                "indices": [
-                    [
-                        2122,
-                        2135
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Leamington_Spa"
-                },
-                "score": 0.9960411787033081,
-                "text": "Leamington Spa",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Location",
-                    "City",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2150,
-                        2157
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Brighton"
-                },
-                "score": 0.9806003570556641,
-                "text": "Brighton",
-                "types": [
-                    "Resort",
-                    "PopulatedPlace",
-                    "Place",
-                    "SkiArea",
-                    "Location",
-                    "City",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        799,
-                        801
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Chief_executive_officer"
-                },
-                "score": 0.9999163746833801,
-                "text": "CEO",
-                "types": [
-                    "PersonFunction"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        65,
-                        74
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Video_game"
-                },
-                "score": 0.9996742010116577,
-                "text": "video game",
-                "types": [
-                    "VideoGame",
-                    "Product",
-                    "MusicGenre",
-                    "Game"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2099,
-                        2108
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Nottingham"
-                },
-                "score": 0.9974074363708496,
-                "text": "Nottingham",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Location",
-                    "City",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2111,
-                        2119
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Newcastle_upon_Tyne"
-                },
-                "score": 0.5351255536079407,
-                "text": "Newcastle",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Location",
-                    "City",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1957,
-                        1961
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Sonic_the_Hedgehog_(character)"
-                },
-                "score": 0.8883975148200989,
-                "text": "Sonic",
-                "types": [
-                    "Character",
-                    "FictionalCharacter"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        0,
-                        6
-                    ],
-                    [
-                        208,
-                        214
-                    ],
-                    [
-                        262,
-                        268
-                    ],
-                    [
-                        388,
-                        394
-                    ],
-                    [
-                        589,
-                        595
-                    ],
-                    [
-                        844,
-                        850
-                    ],
-                    [
-                        942,
-                        948
-                    ],
-                    [
-                        1038,
-                        1044
-                    ],
-                    [
-                        1237,
-                        1243
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Tencent"
-                },
-                "score": 0.9984873533248901,
-                "text": "Tencent",
-                "types": [
-                    "Agent",
-                    "Company",
-                    "Organisation",
-                    "Investment",
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1345,
-                        1354
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Epic_Games"
-                },
-                "score": 1.0,
-                "text": "Epic Games",
-                "types": [
-                    "Agent",
-                    "Company",
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1935,
-                        1947
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Forza_Horizon"
-                },
-                "score": 1.0,
-                "text": "Forza Horizon",
-                "types": [
-                    "VideoGame",
-                    "Product",
-                    "Work",
-                    "Game",
-                    "Software",
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1226,
-                        1234
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Supercell"
-                },
-                "score": 0.49746251106262207,
-                "text": "Supercell",
-                "types": [
-                    "Thunderstorm",
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2211,
-                        2215
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/India"
-                },
-                "score": 0.9987888336181641,
-                "text": "India",
-                "types": [
-                    "PopulatedPlace",
-                    "MusicalArtist",
-                    "Place",
-                    "Location",
-                    "Country"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1384,
-                        1404
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Frontier_Developments"
-                },
-                "score": 1.0,
-                "text": "Frontier Developments",
-                "types": [
-                    "Agent",
-                    "Developer",
-                    "Company",
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1315,
-                        1333
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Activision_Blizzard"
-                },
-                "score": 1.0,
-                "text": "Activision Blizzard",
-                "types": [
-                    "Agent",
-                    "Company",
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1142,
-                        1151
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Riot_Games"
-                },
-                "score": 1.0,
-                "text": "Riot Games",
-                "types": [
-                    "Agent",
-                    "Company",
-                    "Organisation",
-                    "Publisher",
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2205,
-                        2208
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Pune"
-                },
-                "score": 0.9954790472984314,
-                "text": "Pune",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Location",
-                    "City",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1654,
-                        1656
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/United_States_dollar"
-                },
-                "score": 0.9956874251365662,
-                "text": "USD",
-                "types": [
-                    "Currency",
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        608,
-                        616
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Steven_Ma"
-                },
-                "score": 1.0,
-                "text": "Steven Ma",
-                "types": [
-                    "Agent",
-                    "Artist",
-                    "Person",
-                    "Actor"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1411,
-                        1413
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Glutamic_acid"
-                },
-                "score": 0.9904281497001648,
-                "text": "Glu",
-                "types": [
-                    "ChemicalSubstance",
-                    "Acid",
-                    "ChemicalCompound"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2138,
-                        2147
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Warrington"
-                },
-                "score": 0.6368789076805115,
-                "text": "Warrington",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Town",
-                    "Location",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1366,
-                        1371
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Funcom"
-                },
-                "score": 1.0,
-                "text": "Funcom",
-                "types": [
-                    "Agent",
-                    "Developer",
-                    "Company",
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        13,
-                        19
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/China"
-                },
-                "score": 0.8173372745513916,
-                "text": "Chinese",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "State",
-                    "Location",
-                    "Country"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1925,
-                        1930
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Hitman_(2016_video_game)"
-                },
-                "score": 0.4330430030822754,
-                "text": "Hitman",
-                "types": [
-                    "VideoGame",
-                    "Product",
-                    "Work",
-                    "Game",
-                    "Software"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1336,
-                        1342
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Ubisoft"
-                },
-                "score": 1.0,
-                "text": "Ubisoft",
-                "types": [
-                    "Agent",
-                    "Developer",
-                    "Company",
-                    "Organisation",
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2164,
-                        2168
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Leeds"
-                },
-                "score": 0.9498113989830017,
-                "text": "Leeds",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Location",
-                    "City",
-                    "Settlement",
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        153,
-                        164
-                    ],
-                    [
-                        1690,
-                        1701
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Sumo_Digital"
-                },
-                "score": 1.0,
-                "text": "Sumo Digital",
-                "types": [
-                    "Agent",
-                    "Studio",
-                    "Company",
-                    "Organisation",
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2088,
-                        2096
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Sheffield"
-                },
-                "score": 0.9965330362319946,
-                "text": "Sheffield",
-                "types": [
-                    "PopulatedPlace",
-                    "Place",
-                    "Location",
-                    "City",
-                    "Settlement"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1117,
-                        1122
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "League",
-                "types": [
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1127,
-                        1133
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Legends",
-                "types": [
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1357,
-                        1363
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Paradox",
-                "types": [
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1374,
-                        1381
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Bluehole",
-                "types": [
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        2082,
-                        2083
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "UK",
-                "types": [
-                    "Place"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        153,
-                        156
-                    ],
-                    [
-                        175,
-                        178
-                    ],
-                    [
-                        354,
-                        357
-                    ],
-                    [
-                        417,
-                        420
-                    ],
-                    [
-                        531,
-                        534
-                    ],
-                    [
-                        655,
-                        658
-                    ],
-                    [
-                        788,
-                        791
-                    ],
-                    [
-                        1422,
-                        1425
-                    ],
-                    [
-                        1690,
-                        1693
-                    ],
-                    [
-                        2051,
-                        2054
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Sumo",
-                "types": [
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        803,
-                        813
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Carl Cavers",
-                "types": [
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1201,
-                        1205
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Clash",
-                "types": [
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1411,
-                        1420
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Glu Mobile",
-                "types": [
-                    "Person"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1925,
-                        1932
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Hitman 2",
-                "types": [
-                    "Product"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1975,
-                        1985
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Crackdown 3",
-                "types": [
-                    "Product"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        175,
-                        184
-                    ],
-                    [
-                        354,
-                        363
-                    ],
-                    [
-                        417,
-                        426
-                    ],
-                    [
-                        531,
-                        540
-                    ],
-                    [
-                        788,
-                        797
-                    ],
-                    [
-                        1422,
-                        1431
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Sumo Group",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        200,
-                        214
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "GI.biz, Tencent",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        497,
-                        507
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "further.\"We",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        589,
-                        601
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Tencent Games",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        777,
-                        797
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "audiences.\"Sumo Group",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1154,
-                        1166
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Path of Exile",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        318,
-                        323
-                    ],
-                    [
-                        1474,
-                        1479
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Perwyn",
-                "types": [
-                    "Organisation"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        1952,
-                        1968
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Team Sonic Racing",
-                "types": [
-                    "Organisation"
-                ]
-            }
-        ],
-        "title": [
-            {
-                "indices": [
-                    [
-                        0,
-                        6
-                    ]
-                ],
-                "links": {
-                    "dbpedia": "http://dbpedia.org/resource/Tencent"
-                },
-                "score": 1.0,
-                "text": "Tencent",
-                "types": [
-                    "Company",
-                    "Organisation",
-                    "Agent",
-                    "Investment"
-                ]
-            },
-            {
-                "indices": [
-                    [
-                        0,
-                        11
-                    ]
-                ],
-                "links": null,
-                "score": null,
-                "text": "Tencent Buys",
-                "types": [
-                    "Person"
-                ]
-            }
-        ]
-    },
-    "hashtags": [
+  "news_articles": [
+    {
+      "id": "46834363",
+      "author": null,
+      "comments": [],
+      "createdDate": "2019-11-29 04:37:34+00:00",
+      "body": "Tencent, the Chinese internet giant, has invested in yet another video game studio. The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. Tencent owns 9.96 percent of Sumo Group as part of this deal. Terms of the investment were not disclosed any further.We are glad to invest in Sumo Group, a leading independent co-development studio, Tencent Games boss Steven Ma said. We look forward to supporting Sumo's growth and exploring collaborations with the Company to bring more interactive entertainment experiences to global audiences.Sumo Group CEO Carl Cavers said, We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities.This is just the latest gaming investment from Tencent. The company already completely owns or has a controlling interests in League of Legends studio Riot Games, Path of Exile creator Grinding Gear Games, and Clash of Clans developer Supercell. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately. Following Perwyn's initial investment in the company back in 2016, the company is growing in numerous ways. It now operates 10 studios in three countries and posted u00a338 million ($49 million USD) in revenue for the latest year.Sumo Digital, which employs around 600 people and is among the largest development groups in the world, has worked on numerous high-profile projects over the years. In the past two years alone, it has contributed to the development of Hitman 2, Forza Horizon 4, Team Sonic Racing, and Crackdown 3. It is currently working on Dead Island 2, among other projects.Sumo owns seven studios in the UK in Sheffield, Nottingham, Newcastle, Leamington Spa, Warrington, Brighton, and Leeds. The company also has an office in Pune, India.",
+      "summary": "The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. We are glad to invest in Sumo Group, a leading independent co-development studio, Tencent Games boss Steven Ma said. Sumo Group CEO Carl Cavers said, We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately.",
+      "title": "Tencent Buys A Stake In Yet Another Game Studio",
+      "counts": null,
+      "categories": null,
+      "hashtags": [
         "#Tencent",
         "#Stake",
         "#China",
@@ -1016,9 +41,8 @@
         "#Leeds",
         "#Pune",
         "#India"
-    ],
-    "id": 46834363,
-    "keywords": [
+      ],
+      "keywords": [
         "Tencent",
         "Studio",
         "Game",
@@ -1063,257 +87,300 @@
         "Ubisoft",
         "Sumo Digital",
         "Sheffield"
-    ],
-    "language": "en",
-    "links": {
-        "canonical": null,
-        "coverages": "/coverages?story_id=46834363",
-        "permalink": "https://www.gamespot.com/articles/tencent-buys-a-stake-in-yet-another-game-studio/1100-6471802/",
-        "related_stories": "/related_stories?story_id=46834363"
+      ],
+      "language": "en",
+      "links": [
+        "www.google.com",
+        "www.google.com",
+        "www.google.com"
+      ],
+      "media": null,
+      "social": null,
+      "company": "56834361",
+      "sentiment": null
     },
-    "media": [
-        {
-            "content_length": 141592,
-            "format": "JPEG",
-            "height": 720,
-            "type": "image",
-            "url": "https://gamespot1.cbsistatic.com/uploads/screen_kubrick/1197/11970954/3263614-crackdown%203%20vista.jpg",
-            "width": 1280
-        },
-        {
-            "content_length": 25850,
-            "format": "JPEG",
-            "height": 270,
-            "type": "image",
-            "url": "https://gamespot1.cbsistatic.com/uploads/screen_medium/1197/11970954/3263614-crackdown%203%20vista.jpg",
-            "width": 480
-        }
-    ],
-    "paragraphs_count": 1,
-    "published_at": "2019-11-29 04:37:34+00:00",
-    "sentences_count": 21,
-    "sentiment": {
-        "body": {
-            "polarity": "positive",
-            "score": 0.980152
-        },
-        "title": {
-            "polarity": "neutral",
-            "score": 0.834291
-        }
+    {
+      "id": "46834364",
+      "author": null,
+      "comments": [],
+      "createdDate": "2019-11-29 04:37:34+00:00",
+      "body": "Tencent, the Chinese internet giant, has invested in yet another video game studio. The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. Tencent owns 9.96 percent of Sumo Group as part of this deal. Terms of the investment were not disclosed any further.We are glad to invest in Sumo Group, a leading independent co-development studio, Tencent Games boss Steven Ma said. We look forward to supporting Sumo's growth and exploring collaborations with the Company to bring more interactive entertainment experiences to global audiences.Sumo Group CEO Carl Cavers said, We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities.This is just the latest gaming investment from Tencent. The company already completely owns or has a controlling interests in League of Legends studio Riot Games, Path of Exile creator Grinding Gear Games, and Clash of Clans developer Supercell. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately. Following Perwyn's initial investment in the company back in 2016, the company is growing in numerous ways. It now operates 10 studios in three countries and posted u00a338 million ($49 million USD) in revenue for the latest year.Sumo Digital, which employs around 600 people and is among the largest development groups in the world, has worked on numerous high-profile projects over the years. In the past two years alone, it has contributed to the development of Hitman 2, Forza Horizon 4, Team Sonic Racing, and Crackdown 3. It is currently working on Dead Island 2, among other projects.Sumo owns seven studios in the UK in Sheffield, Nottingham, Newcastle, Leamington Spa, Warrington, Brighton, and Leeds. The company also has an office in Pune, India.",
+      "summary": "The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. We are glad to invest in Sumo Group, a leading independent co-development studio, Tencent Games boss Steven Ma said. Sumo Group CEO Carl Cavers said, We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately.",
+      "title": "Tencent Buys A Stake In Yet Another Game Studio",
+      "counts": null,
+      "categories": null,
+      "hashtags": [
+        "#Tencent",
+        "#Stake",
+        "#China",
+        "#VideoGame",
+        "#SumoDigital",
+        "#StevenMa",
+        "#CEO",
+        "#ChiefExecutiveOfficer",
+        "#RiotGames",
+        "#Supercell",
+        "#ActivisionBlizzard",
+        "#Ubisoft",
+        "#EpicGames",
+        "#Funcom",
+        "#FrontierDevelopments",
+        "#GlutamicAcid",
+        "#USD",
+        "#UnitedStatesDollar",
+        "#Hitman",
+        "#ForzaHorizon",
+        "#SonicTheHedgehog",
+        "#Sheffield",
+        "#Nottingham",
+        "#NewcastleUponTyne",
+        "#LeamingtonSpa",
+        "#Warrington",
+        "#Brighton",
+        "#Leeds",
+        "#Pune",
+        "#India"
+      ],
+      "keywords": [
+        "Tencent",
+        "Studio",
+        "Game",
+        "Stake",
+        "Sumo Group",
+        "investment group",
+        "company",
+        "studio",
+        "developer",
+        "Group",
+        "Sumo",
+        "investment",
+        "numerous",
+        "game",
+        "Leeds",
+        "Crackdown",
+        "Dead",
+        "Brighton",
+        "Sonic",
+        "Island",
+        "Leamington",
+        "Leamington Spa",
+        "CEO",
+        "video game",
+        "Nottingham",
+        "Newcastle",
+        "Epic Games",
+        "Forza Horizon",
+        "Supercell",
+        "India",
+        "Frontier Developments",
+        "Activision Blizzard",
+        "Riot Games",
+        "Pune",
+        "USD",
+        "Steven Ma",
+        "Glu",
+        "Warrington",
+        "Funcom",
+        "Chinese",
+        "Hitman",
+        "Ubisoft",
+        "Sumo Digital",
+        "Sheffield"
+      ],
+      "language": "en",
+      "links": null,
+      "media": null,
+      "social": null,
+      "company": "56834360",
+      "sentiment": null
     },
-    "social_shares_count": {
-        "facebook": [
-            {
-                "count": 182,
-                "fetched_at": "2019-11-30 00:25:06+00:00"
-            },
-            {
-                "count": 4,
-                "fetched_at": "2019-11-29 18:25:27+00:00"
-            },
-            {
-                "count": 3,
-                "fetched_at": "2019-11-29 12:26:01+00:00"
-            }
-        ],
-        "google_plus": [],
-        "linkedin": [],
-        "reddit": [
-            {
-                "count": 0,
-                "fetched_at": "2019-11-30 00:13:13+00:00"
-            },
-            {
-                "count": 0,
-                "fetched_at": "2019-11-29 18:15:59+00:00"
-            },
-            {
-                "count": 0,
-                "fetched_at": "2019-11-29 09:21:22+00:00"
-            }
-        ]
+    {
+      "id": "46834365",
+      "author": null,
+      "comments": [],
+      "createdDate": "2019-11-29 04:37:34+00:00",
+      "body": "Tencent, the Chinese internet giant, has invested in yet another video game studio. The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. Tencent owns 9.96 percent of Sumo Group as part of this deal. Terms of the investment were not disclosed any further.We are glad to invest in Sumo Group, a leading independent co-development studio, Tencent Games boss Steven Ma said. We look forward to supporting Sumo's growth and exploring collaborations with the Company to bring more interactive entertainment experiences to global audiences.Sumo Group CEO Carl Cavers said, We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities.This is just the latest gaming investment from Tencent. The company already completely owns or has a controlling interests in League of Legends studio Riot Games, Path of Exile creator Grinding Gear Games, and Clash of Clans developer Supercell. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately. Following Perwyn's initial investment in the company back in 2016, the company is growing in numerous ways. It now operates 10 studios in three countries and posted u00a338 million ($49 million USD) in revenue for the latest year.Sumo Digital, which employs around 600 people and is among the largest development groups in the world, has worked on numerous high-profile projects over the years. In the past two years alone, it has contributed to the development of Hitman 2, Forza Horizon 4, Team Sonic Racing, and Crackdown 3. It is currently working on Dead Island 2, among other projects.Sumo owns seven studios in the UK in Sheffield, Nottingham, Newcastle, Leamington Spa, Warrington, Brighton, and Leeds. The company also has an office in Pune, India.",
+      "summary": "The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group. According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent. We are glad to invest in Sumo Group, a leading independent co-development studio, Tencent Games boss Steven Ma said. Sumo Group CEO Carl Cavers said, We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities. Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately.",
+      "title": "Tencent Buys A Stake In Yet Another Game Studio",
+      "counts": null,
+      "categories": null,
+      "hashtags": [
+        "#Tencent",
+        "#Stake",
+        "#China",
+        "#VideoGame",
+        "#SumoDigital",
+        "#StevenMa",
+        "#CEO",
+        "#ChiefExecutiveOfficer",
+        "#RiotGames",
+        "#Supercell",
+        "#ActivisionBlizzard",
+        "#Ubisoft",
+        "#EpicGames",
+        "#Funcom",
+        "#FrontierDevelopments",
+        "#GlutamicAcid",
+        "#USD",
+        "#UnitedStatesDollar",
+        "#Hitman",
+        "#ForzaHorizon",
+        "#SonicTheHedgehog",
+        "#Sheffield",
+        "#Nottingham",
+        "#NewcastleUponTyne",
+        "#LeamingtonSpa",
+        "#Warrington",
+        "#Brighton",
+        "#Leeds",
+        "#Pune",
+        "#India"
+      ],
+      "keywords": [
+        "Tencent",
+        "Studio",
+        "Game",
+        "Stake",
+        "Sumo Group",
+        "investment group",
+        "company",
+        "studio",
+        "developer",
+        "Group",
+        "Sumo",
+        "investment",
+        "numerous",
+        "game",
+        "Leeds",
+        "Crackdown",
+        "Dead",
+        "Brighton",
+        "Sonic",
+        "Island",
+        "Leamington",
+        "Leamington Spa",
+        "CEO",
+        "video game",
+        "Nottingham",
+        "Newcastle",
+        "Epic Games",
+        "Forza Horizon",
+        "Supercell",
+        "India",
+        "Frontier Developments",
+        "Activision Blizzard",
+        "Riot Games",
+        "Pune",
+        "USD",
+        "Steven Ma",
+        "Glu",
+        "Warrington",
+        "Funcom",
+        "Chinese",
+        "Hitman",
+        "Ubisoft",
+        "Sumo Digital",
+        "Sheffield"
+      ],
+      "language": "en",
+      "links": [
+        "www.google.com",
+        "www.google.com",
+        "www.google.com"
+      ],
+      "media": null,
+      "social": null,
+      "company": "56834361",
+      "sentiment": null
+    }
+  ],
+  "users": [
+    {
+      "id": "16834360",
+      "firstname": "Haris",
+      "lastname": "Zafar",
+      "name": "Haris Zafar",
+      "avatar_url": "image url",
+      "email": "bhand@gmail.com",
+      "password": "bhand123",
+      "role": "user",
+      "createdDate": "2022-02-16 09:21:22+00:00",
+      "is_deleted": false,
+      "news_posts": [],
+      "company": null
     },
-    "source": {
-        "description": null,
-        "domain": "gamespot.com",
-        "home_page_url": "https://www.gamespot.com/",
-        "id": 2427,
-        "links_in_count": null,
-        "locations": [],
-        "logo_url": null,
-        "name": "GameSpot",
-        "rankings": {
-            "alexa": [
-                {
-                    "country": null,
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 354
-                },
-                {
-                    "country": "IN",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 1873
-                },
-                {
-                    "country": "ID",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 800
-                },
-                {
-                    "country": "SG",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 230
-                },
-                {
-                    "country": "AT",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 440
-                },
-                {
-                    "country": "MY",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 525
-                },
-                {
-                    "country": "RU",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 3642
-                },
-                {
-                    "country": "PH",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 238
-                },
-                {
-                    "country": "ES",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 938
-                },
-                {
-                    "country": "US",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 148
-                },
-                {
-                    "country": "RO",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 452
-                },
-                {
-                    "country": "IE",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 161
-                },
-                {
-                    "country": "IR",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 2096
-                },
-                {
-                    "country": "BE",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 402
-                },
-                {
-                    "country": "AU",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 209
-                },
-                {
-                    "country": "FI",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 185
-                },
-                {
-                    "country": "NO",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 203
-                },
-                {
-                    "country": "PL",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 756
-                },
-                {
-                    "country": "SE",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 210
-                },
-                {
-                    "country": "GB",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 146
-                },
-                {
-                    "country": "FR",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 941
-                },
-                {
-                    "country": "PT",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 329
-                },
-                {
-                    "country": "BR",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 620
-                },
-                {
-                    "country": "IT",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 858
-                },
-                {
-                    "country": "MX",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 872
-                },
-                {
-                    "country": "DK",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 209
-                },
-                {
-                    "country": "NL",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 297
-                },
-                {
-                    "country": "CA",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 150
-                },
-                {
-                    "country": "JP",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 1897
-                },
-                {
-                    "country": "CN",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 4288
-                },
-                {
-                    "country": "DE",
-                    "fetched_at": "2019-06-06 16:13:05+00:00",
-                    "rank": 599
-                }
-            ]
-        },
-        "scopes": [],
-        "title": null
+    {
+      "id": "16834361",
+      "firstname": "Huda",
+      "lastname": "Ilyas",
+      "name": "Huda Ilyas",
+      "avatar_url": "image url",
+      "email": "huda@gmail.com",
+      "password": "huda123",
+      "role": "user",
+      "createdDate": "2022-02-16 09:21:22+00:00",
+      "is_deleted": false,
+      "news_posts": [],
+      "company": "56834360"
     },
-    "summary": {
-        "sentences": [
-            "The company's latest investment is in the big British game developer Sumo Digital's owner, Sumo Group.",
-            "According to GI.biz, Tencent has acquired 15 million shares of the company.Tencent did so through a deal with the investment group Perwyn, which sees its ownership of Sumo Group fall to 17.38 percent.",
-            "\"We are glad to invest in Sumo Group, a leading independent co-development studio,\" Tencent Games boss Steven Ma said.",
-            "\"Sumo Group CEO Carl Cavers said, \"We are delighted that Tencent have chosen to acquire a shareholding in the company, and we look forward to working with Tencent to explore co-development opportunities.",
-            "Tencent has minority investment stakes in numerous other companies, including Activision Blizzard, Ubisoft, Epic Games, Paradox, Funcom, Bluehole, Frontier Developments, and Glu Mobile.Sumo Group has been growing a lot lately."
-        ]
+    {
+      "id": "16834359",
+      "firstname": "Super",
+      "lastname": "Admin",
+      "name": "Super Admin",
+      "avatar_url": "image url",
+      "email": "admin@nf.com",
+      "password": "admin123",
+      "role": "admin",
+      "createdDate": "2022-02-16 09:21:22+00:00",
+      "is_deleted": false,
+      "news_posts": [],
+      "company": null
+    }
+  ],
+  "companies": [
+    {
+      "id": "56834360",
+      "name": "Geo News",
+      "avatar_url": "image url",
+      "email": "geo@gmail.com",
+      "password": "geo123",
+      "createdDate": "2022-02-16 09:21:22+00:00",
+      "is_deleted": false,
+      "news_articles": [
+        "46834364"
+      ]
     },
-    "title": "Tencent Buys A Stake In Yet Another Game Studio",
-    "words_count": 366
+    {
+      "id": "56834361",
+      "name": "Ary News",
+      "avatar_url": "image url",
+      "email": "ary@gmail.com",
+      "password": "ary123",
+      "createdDate": "2022-02-16 09:21:22+00:00",
+      "is_deleted": false,
+      "news_articles": [
+        "46834363",
+        "46834365"
+      ]
+    }
+  ],
+  "news_posts": [
+    {
+      "user": "16834360",
+      "article": "46834363",
+      "upvote": 10,
+      "downvote": 2,
+      "comments": [],
+      "createdDate": "2022-02-16 09:21:22+00:00"
+    },
+    {
+      "user": "16834361",
+      "article": "46834364",
+      "upvote": 10,
+      "downvote": 2,
+      "comments": [],
+      "createdDate": "2022-02-16 09:21:22+00:00"
+    }
+  ]
 }

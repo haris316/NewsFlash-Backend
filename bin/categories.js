@@ -31,13 +31,11 @@ router.post("/addcategory", (req, res) => {
           })
         )
         .catch((err) => {
-          return res
-            .status(200)
-            .json({
-              error: true,
-              success: false,
-              message: "Please try agin later",
-            });
+          return res.status(200).json({
+            error: true,
+            success: false,
+            message: "Please try agin later",
+          });
         });
     }
   });
