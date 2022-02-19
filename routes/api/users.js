@@ -50,7 +50,7 @@ router.post("/register", (req, res) => {
   if (!isValid) {
     return res
       .status(200)
-      .json({ success: false, message: "Invalid Data Entered" });
+      .json({ success: false, error: errors , message: "Invalid Data Entered" });
   }
 
   userModel.findOne({ email: req.body.email }, (err, user) => {
@@ -60,7 +60,9 @@ router.post("/register", (req, res) => {
         .json({ success: false, message: "Email already in use!" });
     } else {
       const newUser = new userModel({
-        name: req.body.name,
+        name: req.body.firstname + " " + req.body.lastname,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
         email: req.body.email,
         password: req.body.password,
       });
@@ -76,7 +78,7 @@ router.post("/register", (req, res) => {
               res.status(200).json({
                 success: true,
                 error: false,
-                user:user,
+                user: user,
                 message: "User successfully registered!",
               })
             )
@@ -95,6 +97,11 @@ router.post("/register", (req, res) => {
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
+
+router.get("/log", (req, res) => {
+  return res.status(400).json({ message: "Working" });
+})
+
 router.post("/login", (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
 

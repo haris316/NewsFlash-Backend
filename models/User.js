@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema({
   avatar_url: {
     type: String,
     required: false,
+    default:"https://cdn-icons.flaticon.com/png/512/2102/premium/2102647.png?token=exp=1645268987~hmac=6d3017f0a434c45a93855d8cd02ab28b"
   },
   email: {
     type: String,
@@ -36,20 +37,25 @@ const userSchema = new mongoose.Schema({
   },
   createdDate: {
     type: Date,
-    required: true,
+    required: false,
     default: Date.now(),
   },
   is_deleted: {
     type: Boolean,
     default: false,
+    required:false
   },
   news_posts: {
     type: [mongoose.Schema.Types.ObjectId],
     ref: "newsPostSchema",
+    default: [],
+    required:false
   },
   news_articles: {
     type: [mongoose.Schema.Types.ObjectId],
     ref: "newsArticleSchema",
+    default: [],
+    required:false
   },
   company: {
     type: mongoose.Schema.Types.ObjectId,

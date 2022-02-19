@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const UserSchema = require("./User");
 const CommentSchema = require("./Comment");
 const CategorySchema = require("./Category");
-const MediaSchema = require("./Media");
+// const MediaSchema = require("./Media");
+const { MediaSchema } = require(__dirname + '/Media.js').schema;
 const CompanySchema = require("./Company");
 const HashtagSchema = require("./Hashtag");
 
@@ -51,7 +52,7 @@ const NewsArticleSchema = new mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         ref: "HashtagSchema",
         required: false,
-        default:[]
+        default: []
     },
     keywords: {
         type: [String],
@@ -61,9 +62,8 @@ const NewsArticleSchema = new mongoose.Schema({
         type: [String],
         required: false,
     },
-    media: {
-        type: [MediaSchema],
-        required: false,
+    media: { 
+        type: [MediaSchema] 
     },
     sentiment: {
         polarity: [{
