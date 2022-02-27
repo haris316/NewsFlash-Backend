@@ -20,9 +20,14 @@ const NewsArticleSchema = new mongoose.Schema({
         default: [],
         ref: "CommentSchema",
     },
+    is_deleted: {
+        type: Boolean,
+        default: false,
+        required: false
+    },
     createdDate: {
         type: Date,
-        required: true,
+        required: false,
         default: Date.now(),
     },
     body: {
@@ -41,9 +46,10 @@ const NewsArticleSchema = new mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         ref: "CategorySchema",
         required: false,
+        default: []
     },
     counts: {
-        charachters: { type: Number, default: 0, required: true },
+        characters: { type: Number, default: 0, required: true },
         sentences: { type: Number, default: 0, required: true },
         paragraphs: { type: Number, default: 0, required: true },
         words: { type: Number, default: 0, required: true }
@@ -56,21 +62,24 @@ const NewsArticleSchema = new mongoose.Schema({
     },
     keywords: {
         type: [String],
-        required: true,
+        required: false,
+        default: []
     },
     links: {
         type: [String],
         required: false,
+        default: []
     },
-    media: { 
-        type: [MediaSchema] 
+    media: {
+        type: [MediaSchema],
+        required: false,
+        default: []
     },
     sentiment: {
         polarity: [{
             type: { type: String, default: "", required: false },
             score: { type: Number, default: 0, required: false }
         }],
-
     },
     social: {
         facebook_count: {
@@ -100,9 +109,9 @@ const NewsArticleSchema = new mongoose.Schema({
         }
     },
     company: {
-        type: [mongoose.Schema.Types.ObjectId],
+        type: mongoose.Schema.Types.ObjectId,
         required: false,
-        ref: "CompanySchema"
+        ref: "CompanySchema",
     },
 
 });

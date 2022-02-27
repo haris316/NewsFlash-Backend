@@ -19,7 +19,7 @@ const companySchema = new mongoose.Schema({
       },
       createdDate: {
         type: Date,
-        required: true,
+        required: false,
         default: Date.now(),
       },
       is_deleted: {
@@ -29,6 +29,8 @@ const companySchema = new mongoose.Schema({
       news_articles: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: "newsArticleSchema",
+        required:false,
+        default:[]
       },
 });
 

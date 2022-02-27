@@ -46,6 +46,7 @@ router.post("/getprofile", (req, res) => {
 // @access Public
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
+  console.log(req.body)
   // Check validation
   if (!isValid) {
     return res
@@ -74,13 +75,14 @@ router.post("/register", (req, res) => {
           newUser.password = hash;
           newUser
             .save()
-            .then((user) =>
+            .then((user) =>{
+              console.log(user);
               res.status(200).json({
                 success: true,
                 error: false,
                 user: user,
                 message: "User successfully registered!",
-              })
+              })}
             )
             .catch((err) => {
               return res
