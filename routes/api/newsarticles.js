@@ -7,7 +7,7 @@ const NewsArticleModel = require("../../models/NewsArticle");
 const UserModel = require("../../models/User");
 const CompanyModel = require("../../models/Company");
 
-router.get("/getall", (req, res) => {
+router.post("/getall", (req, res) => {
   NewsArticleModel.find({ is_deleted: false }).then((docs, err) => {
     if (docs) {
       return res
@@ -45,7 +45,7 @@ router.post("/addarticle", (req, res) => {
   const calc_characters = req.body.body.length;
   const calc_sentences = req.body.body.replace(/[.?!]/g,"|").split("|").length;
   const calc_words = req.body.body.split(" ").length;
-  const calc_paragraphs = req.body.body.split("\\n").length;
+  const calc_body = req.body.body.split("\n");
   const author_email = req.body.author_email;
   const company_email = req.body.company_email;
   let id_author = "";
@@ -53,26 +53,27 @@ router.post("/addarticle", (req, res) => {
   UserModel.findOne({ email: author_email }).then((docs, err) => {
     if (docs) {
       id_author = docs._id;
-      console.log(docs)
+      // console.log(docs)
       CompanyModel.findOne({ email: company_email }).then((docs, err) => {
         if (docs) {
           id_company = docs._id;
           const newArticle = new NewsArticleModel({
             author: id_author,
             company: id_company,
-            body: req.body.body,
+            body_full: req.body.body,
+            body: calc_body,
             title: req.body.title,
             summary: req.body.summary,
             counts: {
               characters: calc_characters,
               sentences: calc_sentences,
-              paragraphs: calc_paragraphs,
+              paragraphs: calc_body.length,
               words: calc_words
             },
           });
           // console.log(newArticle);
           newArticle.save().then((Article) => {
-            console.log(Article);
+            // console.log(Article);
             res.status(200).json({
               success: true,
               error: false,

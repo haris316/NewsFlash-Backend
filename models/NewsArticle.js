@@ -31,6 +31,10 @@ const NewsArticleSchema = new mongoose.Schema({
         default: Date.now(),
     },
     body: {
+        type: [String],
+        required: true,
+    },
+    body_full: {
         type: String,
         required: true,
     },
