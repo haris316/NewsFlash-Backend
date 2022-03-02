@@ -37,6 +37,6 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/newsarticles", newsarticles);
 
-const port = 7000;
+const port = process.env.PORT || 7000;
 
 app.listen(port, () => console.log("Server is live on port " + port));
