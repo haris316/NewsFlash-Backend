@@ -101,7 +101,7 @@ router.post("/register", (req, res) => {
 // @access Public
 
 router.get("/log", (req, res) => {
-  return res.status(400).json({ message: "Working" });
+  return res.status(400).json({ message: "We good!" });
 })
 
 router.post("/login", (req, res) => {
