@@ -23,27 +23,10 @@ router.post("/getall", (req, res) => {
   });
 });
 
-// router.get("/getalltemp", (req, res) => {
-//   CompanyModel.find({ is_deleted: false }).then((docs, err) => {
-//     if (docs) {
-//       return res
-//         .status(200)
-//         .json({
-//           error: false,
-//           data: docs,
-//           message: "Here you go good sir",
-//         });
-//     } else if (err) {
-//       return res.status(200).json({ error: true, message: "Unable to fetch data", err: err });
-//     }
-//   });
-// });
-
-
 
 router.post("/addarticle", (req, res) => {
   const calc_characters = req.body.body.length;
-  const calc_sentences = req.body.body.replace(/[.?!]/g,"|").split("|").length;
+  const calc_sentences = req.body.body.replace(/[.?!]/g, "|").split("|").length;
   const calc_words = req.body.body.split(" ").length;
   const calc_body = req.body.body.split("\n");
   const author_email = req.body.author_email;
@@ -99,29 +82,58 @@ router.get("/log", (req, res) => {
   return res.status(400).json({ message: "Working" });
 })
 
+router.post("/editarticle", (req, res) => {
+  const calc_characters = req.body.body.length;
+  const calc_sentences = req.body.body.replace(/[.?!]/g, "|").split("|").length;
+  const calc_words = req.body.body.split(" ").length;
+  const calc_body = req.body.body.split("\n");
 
-// // Update name of user
-// router.post("/updatename", (req, res) => {
-//   const { email, newName } = req.body;
+  NewsArticleModel.findOneAndUpdate(
+    { _id: req.body.id_article, author: req.body.id_author, company: req.body.id_company },
+    {
+      body_full: req.body.body,
+      body: calc_body,
+      title: req.body.title,
+      summary: req.body.summary,
+      counts: {
+        characters: calc_characters,
+        sentences: calc_sentences,
+        paragraphs: calc_body.length,
+        words: calc_words
+      }
+    },
+    (err, doc) => {
+      if (doc) {
+        return res.status(200).json({
+          error: false,
+          data: doc,
+          message: "Article Updated",
+        });
+      } else if (err) {
+        return res.status(200).json({ error: true, message: "Unable to perform update at this moment", err: err });
+      }
+    })
+});
 
-//   userModel.findOneAndUpdate(
-//     { email: email, is_deleted: false },
-//     { name: newName },
-//     (err, doc) => {
-//       if (err) {
-//         return res.status(400).json({
-//           error: true,
-//           message: err.message,
-//           data: err,
-//         });
-//       } else {
-//         return res.status(200).json({
-//           error: false,
-//           message: "Name updated successfully!",
-//         });
-//       }
-//     }
-//   );
-// });
+router.post("/updatemedia", (req, res) => {
+  let newmedia = req.body.newmedia;
+  NewsArticleModel.findOneAndUpdate(
+    { _id: req.body.id_article, author: req.body.id_author, company: req.body.id_company },
+    {
+      media: newmedia
+    },
+    (err, doc) => {
+      if (doc) {
+        return res.status(200).json({
+          error: false,
+          message: "Media Added",
+        });
+      } else if (err) {
+        return res.status(200).json({ error: true, message: "Unable to upload at this moment", err: err });
+      }
+    })
+});
+
+
 
 module.exports = router;

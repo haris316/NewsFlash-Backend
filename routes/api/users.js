@@ -51,7 +51,7 @@ router.post("/register", (req, res) => {
   if (!isValid) {
     return res
       .status(200)
-      .json({ success: false, error: errors , message: "Invalid Data Entered" });
+      .json({ success: false, error: errors, message: "Invalid Data Entered" });
   }
 
   userModel.findOne({ email: req.body.email }, (err, user) => {
@@ -75,14 +75,15 @@ router.post("/register", (req, res) => {
           newUser.password = hash;
           newUser
             .save()
-            .then((user) =>{
+            .then((user) => {
               console.log(user);
               res.status(200).json({
                 success: true,
                 error: false,
                 user: user,
                 message: "User successfully registered!",
-              })}
+              })
+            }
             )
             .catch((err) => {
               return res
@@ -202,11 +203,11 @@ router.post("/updatepassword", (req, res) => {
 
 // Update name of user
 router.post("/updatename", (req, res) => {
-  const { email, newName } = req.body;
+  const { email, firstname, lastName } = req.body;
 
   userModel.findOneAndUpdate(
     { email: email, is_deleted: false },
-    { name: newName },
+    { name: firstName + " " + lastName, firstName: firstName, lastName: lastName },
     (err, doc) => {
       if (err) {
         return res.status(400).json({
