@@ -6,11 +6,11 @@ const categorySchema = {
     type: String,
     required: true,
   },
-  hashtags: {
-    type: [mongoose.Schema.Types.ObjectId],
-    required: false,
-    ref:"HashtagSchema"
-  },
+  // hashtags: {
+  //   type: [mongoose.Schema.Types.ObjectId],
+  //   required: false,
+  //   ref:"HashtagSchema"
+  // },
   keywords: {
     type: [String],
     required: false,

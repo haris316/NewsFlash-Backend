@@ -5,6 +5,7 @@ const env = require("dotenv");
 env.config();
 const users = require("./routes/api/users");
 const newsarticles = require("./routes/api/newsarticles");
+const category = require("./routes/api/category");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -35,6 +36,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 app.use("/api/users", users);
+app.use("/api/category", category);
 app.use("/api/newsarticles", newsarticles);
 
 const port = process.env.PORT || 7000;
