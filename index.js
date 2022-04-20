@@ -6,6 +6,7 @@ env.config();
 const users = require("./routes/api/users");
 const newsarticles = require("./routes/api/newsarticles");
 const category = require("./routes/api/category");
+const followers = require("./routes/api/followers");
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -38,7 +39,8 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/category", category);
 app.use("/api/newsarticles", newsarticles);
+app.use("/api/followers", followers);
 
 const port = process.env.PORT || 7000;
  
-app.listen(port, () => console.log("Server is live on port number : " + port));
+app.listen(port, () => console.log("Server is live on port number " + port));

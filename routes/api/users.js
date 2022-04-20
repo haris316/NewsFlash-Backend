@@ -183,6 +183,7 @@ router.post("/updatepassword", (req, res) => {
                   } else {
                     return res.status(200).json({
                       error: false,
+                      data:newDoc,
                       message: "Password updated successfully!",
                     });
                   }
@@ -207,7 +208,7 @@ router.post("/updatename", (req, res) => {
 
   userModel.findOneAndUpdate(
     { email: email, is_deleted: false },
-    { name: firstName + " " + lastName, firstName: firstName, lastName: lastName },
+    { name: firstname + " " + lastName, firstName: firstname, lastName: lastName },
     (err, doc) => {
       if (err) {
         return res.status(400).json({

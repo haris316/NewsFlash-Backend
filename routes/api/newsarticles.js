@@ -31,6 +31,12 @@ router.post("/addarticle", (req, res) => {
   const calc_body = req.body.body.split("\n");
   const author_email = req.body.author_email;
   const company_email = req.body.company_email;
+
+  let polarity = [];
+  for (var i = 0; i < req.body.categories; i++) {
+    polarity.push({ type: req.body.categories[i], score: 1 })
+  }
+
   let id_author = "";
   let id_company = "";
   UserModel.findOne({ email: author_email }).then((docs, err) => {
@@ -53,6 +59,13 @@ router.post("/addarticle", (req, res) => {
               paragraphs: calc_body.length,
               words: calc_words
             },
+            hashtags: req.body.hashtags,
+            keywords: req.body.keywords,
+            links: req.body.links,
+            media: req.body.media,
+            sentiment: {
+              polarity: polarity
+            }
           });
           // console.log(newArticle);
           newArticle.save().then((Article) => {

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const newsPostSchema = require("./NewsPost");
 const newsArticleSchema = require("./NewsArticle");
 const companySchema = require("./Company");
+const smallUserSchema = require("./smallUser");
 
 const userSchema = new mongoose.Schema({
   firstname: {
@@ -19,7 +20,7 @@ const userSchema = new mongoose.Schema({
   avatar_url: {
     type: String,
     required: false,
-    default:"https://cdn-icons.flaticon.com/png/512/2102/premium/2102647.png?token=exp=1645268987~hmac=6d3017f0a434c45a93855d8cd02ab28b"
+    default: "https://cdn-icons.flaticon.com/png/512/2102/premium/2102647.png?token=exp=1645268987~hmac=6d3017f0a434c45a93855d8cd02ab28b"
   },
   email: {
     type: String,
@@ -43,26 +44,54 @@ const userSchema = new mongoose.Schema({
   is_deleted: {
     type: Boolean,
     default: false,
-    required:false
+    required: false
   },
-  news_posts: {
+  opinions: {
     type: [mongoose.Schema.Types.ObjectId],
     ref: "newsPostSchema",
     default: [],
-    required:false
+    required: false
   },
-  news_articles: {
+  pins: {
     type: [mongoose.Schema.Types.ObjectId],
     ref: "newsArticleSchema",
     default: [],
-    required:false
+    required: false
   },
   company: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "companySchema",
-    default:null,
-    required:false
+    default: null,
+    required: false
   },
+  news_stand: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "companySchema",
+    default: [],
+    required: false
+  },
+  followers: {
+    type: [smallUserSchema],
+    required: false,
+    default: [],
+    ref: "smallUserSchema",
+  },
+  following: {
+    type: [smallUserSchema],
+    required: false,
+    default: [],
+    ref: "smallUserSchema",
+  },
+  requests_sent: [{
+    user: { type: smallUserSchema, required: true },
+    my_handshake: { type: Boolean, required: true },
+    target_handshake: { type: Boolean, required: true },
+  }],
+  requests_recieved: [{
+    user: { type: smallUserSchema, required: true },
+    my_handshake: { type: Boolean, required: true },
+    target_handshake: { type: Boolean, required: true },
+  }],
 });
 
 const userModel = new mongoose.model("user", userSchema);

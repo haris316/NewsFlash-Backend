@@ -117,6 +117,11 @@ const NewsArticleSchema = new mongoose.Schema({
         required: false,
         ref: "CompanySchema",
     },
+    toProcess: {
+        type: Boolean,
+        required: false,
+        default: true,
+    },
 
 });
 
