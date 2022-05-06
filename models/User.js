@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const newsPostSchema = require("./NewsPost");
 const newsArticleSchema = require("./NewsArticle");
 const companySchema = require("./Company");
-const smallUserSchema = require(__dirname + '/SmallUser.js').schema;
+const smallUserSchema = require("./SmallUser");
 
 const userSchema = new mongoose.Schema({
   firstname: {
