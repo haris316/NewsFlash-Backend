@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const newsPostSchema = require("./NewsPost");
 const newsArticleSchema = require("./NewsArticle");
 const companySchema = require("./Company");
-const { smallUserSchema } = require(__dirname + '/SmallUser.js').schema;
+const smallUserSchema = require(__dirname + '/SmallUser.js').schema;
 
 const userSchema = new mongoose.Schema({
   firstname: {
@@ -74,13 +74,11 @@ const userSchema = new mongoose.Schema({
     type: [smallUserSchema],
     required: false,
     default: [],
-    ref: "smallUserSchema",
   },
   following: {
     type: [smallUserSchema],
     required: false,
     default: [],
-    ref: "smallUserSchema",
   },
   requests_sent: [{
     user: { type: smallUserSchema, required: true },
