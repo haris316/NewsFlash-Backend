@@ -6,6 +6,7 @@ const router = express.Router();
 const NewsArticleModel = require("../../models/NewsArticle");
 const UserModel = require("../../models/User");
 const CompanyModel = require("../../models/Company");
+const hashtagModel = require("../../models/Hashtag");
 
 router.post("/getall", (req, res) => {
   NewsArticleModel.find({ is_deleted: false }).then((docs, err) => {
@@ -33,12 +34,44 @@ router.post("/addarticle", (req, res) => {
   const company_email = req.body.company_email;
 
   let polarity = [];
-  for (var i = 0; i < req.body.categories; i++) {
+  for (var i = 0; i < req.body.categories.length; i++) {
     polarity.push({ type: req.body.categories[i], score: 1 })
+  }
+
+  let allKeywords = [];
+  for (var i = 0; i < req.body.keywords.length; i++) {
+    allKeywords.push(req.body.keywords[i].toLowerCase())
   }
 
   let id_author = "";
   let id_company = "";
+
+  let allHashtags = [];
+  for (var i = 0; i < req.body.hashtags.length; i++) {
+    let NAME = req.body.hashtags[i].toUpperCase()
+    hashtagModel.findOne({ name: NAME }).then((doc, err) => {
+      let NewHashtag = {};
+      if (err) {
+        return res.status(200).json({ error: true, message: "Please Try Again. Problem with your hashtags", err: err });
+      }
+      else if (doc === null) {
+        NewHashtag = new hashtagModel({
+          name: NAME,
+          createdDate: Date.now(),
+          count: 1,
+          isHyped: false,
+        });
+        allHashtags.push(NAME);
+        NewHashtag.save();
+      }
+      else if (doc) {
+        allHashtags.push(doc.name);
+        doc.count = doc.count + 1;
+        doc.save();
+      }
+    })
+  }
+
   UserModel.findOne({ email: author_email }).then((docs, err) => {
     if (docs) {
       id_author = docs._id;
@@ -59,17 +92,14 @@ router.post("/addarticle", (req, res) => {
               paragraphs: calc_body.length,
               words: calc_words
             },
-            hashtags: req.body.hashtags,
-            keywords: req.body.keywords,
+            hashtags: allHashtags,
+            keywords: allKeywords,
             links: req.body.links,
-            media: req.body.media,
             sentiment: {
               polarity: polarity
             }
           });
-          // console.log(newArticle);
           newArticle.save().then((Article) => {
-            // console.log(Article);
             res.status(200).json({
               success: true,
               error: false,
@@ -86,7 +116,7 @@ router.post("/addarticle", (req, res) => {
         }
       })
     } else if (err) {
-      return res.status(200).json({ error: true, message: "Unable to found user", err: err });
+      return res.status(200).json({ error: true, message: "Unable to find user", err: err });
     }
   })
 });

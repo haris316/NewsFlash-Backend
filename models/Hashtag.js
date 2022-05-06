@@ -7,16 +7,17 @@ const hashtagSchema = new mongoose.Schema({
   },
   createdDate: {
     type: Date,
-    required: true,
+    required: false,
     default: Date.now(),
   },
   count: {
     type: Number,
-    required: true,
-    default: 0,
+    required: false,
+    default: 1,
   },
   isHyped: {
     type: Boolean,
+    required: false,
     default: false,
   },
 });
