@@ -7,9 +7,11 @@ const users = require("./routes/api/users");
 const newsarticles = require("./routes/api/newsarticles");
 const category = require("./routes/api/category");
 const followers = require("./routes/api/followers");
+const company = require("./routes/api/company");
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true, limit: "5mb" }))
+// app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(function (req, res, next) {
@@ -40,7 +42,8 @@ app.use("/api/users", users);
 app.use("/api/category", category);
 app.use("/api/newsarticles", newsarticles);
 app.use("/api/followers", followers);
+app.use("/api/company", company);
 
 const port = process.env.PORT || 7000;
- 
+
 app.listen(port, () => console.log("Server is live on port number " + port));

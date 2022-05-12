@@ -1,26 +1,19 @@
 const validator = require('validator')
 const isEmpty = require('is-empty')
 
-const validateRegisterInput = (data) => {
+const validateRegisterInputCompany = (data) => {
     let errors = {}
 
     // Convert fields into empty string initially
-    data.firstname = !isEmpty(data.firstname) ? data.firstname : ''
-    data.lastname = !isEmpty(data.lastname) ? data.lastname : ''
+    data.name = !isEmpty(data.name) ? data.name : ''
     data.email = !isEmpty(data.email) ? data.email : ''
     data.password = !isEmpty(data.password) ? data.password : ''
     data.password2 = !isEmpty(data.password2) ? data.password2 : ''
 
     // Name Check
-    if (validator.isEmpty(data.firstname)) {
-        errors.firstname = "First Name field is required"
+    if (validator.isEmpty(data.name)) {
+        errors.name = "Name field is required"
     }
-
-    // Name Check
-    if (validator.isEmpty(data.lastname)) {
-        errors.lastname = "Last Name field is required"
-    }
-
     // Email Check
     if (validator.isEmpty(data.email)) {
         errors.email = "Email field is required"
@@ -51,6 +44,4 @@ const validateRegisterInput = (data) => {
     }
 }
 
-
-
-module.exports = validateRegisterInput
+module.exports = validateRegisterInputCompany

@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const newsPostSchema = require("./NewsPost");
-const newsArticleSchema = require("./NewsArticle");
-const companySchema = require("./Company");
+const newsArticleSchema = require("./NewsArticleSchema");
+const newsPostSchema = require("./NewsPostSchema");
 const smallUserSchema = require("./SmallUser");
+const smallCompanySchema = require("./SmallCompany");
 
 const userSchema = new mongoose.Schema({
   firstname: {
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
   role: {
     type: String,
     required: false,
-    enum: ["user", "admin", "company"],
+    enum: ["user", "admin"],
     default: "user",
   },
   createdDate: {
@@ -47,26 +47,27 @@ const userSchema = new mongoose.Schema({
     required: false
   },
   opinions: {
-    type: [mongoose.Schema.Types.ObjectId],
-    ref: "newsPostSchema",
+    type: [newsPostSchema],
+    default: [],
+    required: false
+  },
+  news_articles: {
+    type: [newsArticleSchema],
     default: [],
     required: false
   },
   pins: {
-    type: [mongoose.Schema.Types.ObjectId],
-    ref: "newsArticleSchema",
+    type: [newsArticleSchema],
     default: [],
     required: false
   },
   company: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "companySchema",
+    type: smallCompanySchema,
     default: null,
     required: false
   },
   news_stand: {
-    type: [mongoose.Schema.Types.ObjectId],
-    ref: "companySchema",
+    type: [smallCompanySchema],
     default: [],
     required: false
   },
@@ -80,16 +81,24 @@ const userSchema = new mongoose.Schema({
     required: false,
     default: [],
   },
-  requests_sent: [{
-    user: { type: smallUserSchema, required: true },
-    my_handshake: { type: Boolean, required: true },
-    target_handshake: { type: Boolean, required: true },
-  }],
-  requests_recieved: [{
-    user: { type: smallUserSchema, required: true },
-    my_handshake: { type: Boolean, required: true },
-    target_handshake: { type: Boolean, required: true },
-  }],
+  requests_sent: {
+    type: [{
+      user: { type: smallUserSchema, required: true },
+      my_handshake: { type: Boolean, required: true },
+      target_handshake: { type: Boolean, required: true },
+    }],
+    required: false,
+    default: [],
+  },
+  requests_recieved: {
+    type: [{
+      user: { type: smallUserSchema, required: true },
+      my_handshake: { type: Boolean, required: true },
+      target_handshake: { type: Boolean, required: true },
+    }],
+    required: false,
+    default: []
+  }
 });
 
 const userModel = new mongoose.model("user", userSchema);

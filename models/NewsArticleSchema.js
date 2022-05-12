@@ -114,6 +114,6 @@ const NewsArticleSchema = new mongoose.Schema({
 
 });
 
-const NewsArticleModel = new mongoose.model("news_article", NewsArticleSchema);
+// const NewsArticleModel = new mongoose.model("news_article", NewsArticleSchema);
 
-module.exports = NewsArticleModel;
+module.exports = NewsArticleSchema;

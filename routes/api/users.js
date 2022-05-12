@@ -11,6 +11,7 @@ const validateLoginInput = require("../../validation/login");
 // Load User Model
 const userModel = require("../../models/User");
 const passport = require("passport");
+const companyModel = require("../../models/Company");
 
 router.post("/getprofile", (req, res) => {
   jwt.verify(req.body.token, keys.secretOrKey, function (err, decoded) {
@@ -40,10 +41,116 @@ router.post("/getprofile", (req, res) => {
   });
 });
 
-// Register POST Route
-// @route POST api/users/register
-// @desc Register user
-// @access Public
+
+//Get Profile By Email
+router.post("/getprofilebyemail", (req, res) => {
+  userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+    if (user) {
+      return res.status(200).json({
+        success: true,
+        data: user,
+        message: "Here you go good sir",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch profile" });
+    }
+  });
+});
+
+
+
+//Add User to Company By Email
+router.post("/addusertocompany", (req, res) => {
+  let userDoc = null
+  let comDoc = null
+  userModel.findOne({ email: req.body.useremail, is_deleted: false }, (err, user) => {
+    if (user) {
+      userDoc = user;
+      companyModel.findOne({ email: req.body.companyemail, is_deleted: false }, (err, user) => {
+        if (user) {
+          bcrypt.compare(req.body.companypassword, user.password).then((isMatch) => {
+            if (isMatch) {
+              comDoc = user;
+              userDoc.company = {
+                name: comDoc.name,
+                avatar_url: comDoc.avatar_url,
+                email: comDoc.email,
+                _id: comDoc._id,
+              }
+              userDoc.save((newDoc) => {
+                return res.status(200).json({
+                  success: true,
+                  message: "User Added to Company",
+                });
+              });
+            }
+            else return res.status(200).json({ success: false, message: "Invalid Credentials" });
+          })
+        }
+        else return res.status(200).json({ success: false, message: "Unable to fetch company profile" });
+      })
+    } else return res.status(200).json({ success: false, message: "Unable to fetch user profile" });
+  });
+});
+
+
+
+//Get Opinions By Email
+router.post("/getopinions", (req, res) => {
+  userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+    if (user) {
+      return res.status(200).json({
+        success: true,
+        data: user.opinions,
+        message: "Here you go good sir",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch profile" });
+    }
+  });
+});
+
+//Get Pins By Email
+router.post("/getpins", (req, res) => {
+  userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+    if (user) {
+      return res.status(200).json({
+        success: true,
+        data: user.pins,
+        message: "Here you go good sir",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch profile" });
+    }
+  });
+});
+
+
+//Get Newstand By Email
+router.post("/getnewstand", (req, res) => {
+  userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+    if (user) {
+      return res.status(200).json({
+        success: true,
+        data: user.news_stand,
+        message: "Here you go good sir",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch profile" });
+    }
+  });
+});
+
+
+//Register User
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
   console.log(req.body)
@@ -95,11 +202,6 @@ router.post("/register", (req, res) => {
     }
   });
 });
-
-// Login POST Route
-// @route POST api/users/login
-// @desc Login user and return JWT token
-// @access Public
 
 router.get("/log", (req, res) => {
   return res.status(400).json({ message: "We good to go!" });
@@ -183,7 +285,7 @@ router.post("/updatepassword", (req, res) => {
                   } else {
                     return res.status(200).json({
                       error: false,
-                      data:newDoc,
+                      data: newDoc,
                       message: "Password updated successfully!",
                     });
                   }

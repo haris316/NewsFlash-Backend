@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const HashtagSchema = require("./Hashtag");
+// const HashtagSchema = require("./Hashtag");
 
 const categorySchema = {
   name: {
@@ -11,10 +11,10 @@ const categorySchema = {
   //   required: false,
   //   ref:"HashtagSchema"
   // },
-  keywords: {
-    type: [String],
-    required: false,
-  },
+  // keywords: {
+  //   type: [String],
+  //   required: false,
+  // },
 };
 
 const categoryModel = new mongoose.model("category", categorySchema);

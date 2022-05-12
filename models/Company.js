@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const NewsArticleSchema = require("./NewsArticleSchema");
 
 const companySchema = new mongoose.Schema({
     name: {
@@ -7,6 +8,7 @@ const companySchema = new mongoose.Schema({
       },
       avatar_url: {
         type: String,
+        default:"https://cdn-icons.flaticon.com/png/512/2102/premium/2102647.png?token=exp=1645268987~hmac=6d3017f0a434c45a93855d8cd02ab28b",
         required: false,
       },
       email: {
@@ -27,8 +29,7 @@ const companySchema = new mongoose.Schema({
         default: false,
       },
       news_articles: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "newsArticleSchema",
+        type: [NewsArticleSchema],
         required:false,
         default:[]
       },

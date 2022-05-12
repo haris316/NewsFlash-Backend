@@ -6,9 +6,25 @@ const router = express.Router();
 // const UserModel = require("../../models/User");
 const CategoryModel = require("../../models/Category");
 
+
+router.get("/getall", (req, res) => {
+    CategoryModel.find({ is_deleted: false }, (err, docs) => {
+        if (docs) {
+            return res
+                .status(200)
+                .json({
+                    error: false,
+                    data: docs,
+                    message: "Here you go good sir",
+                });
+        } else if (err) {
+            return res.status(200).json({ error: true, message: "Unable to fetch data", err: err });
+        }
+    }).sort({ name: 1 });
+});
+
 router.post("/addcategory", (req, res) => {
     const name = req.body.name;
-    const keywords = req.body.keywords;
     CategoryModel.findOne({ name: name }).then((doc, error) => {
         if (doc) {
             return res.status(200).json({ error: true, message: "Category already exists" });
@@ -16,7 +32,6 @@ router.post("/addcategory", (req, res) => {
         else {
             const newCat = new CategoryModel({
                 name: name,
-                keywords: keywords,
             });
             newCat.save().then((Category) => {
                 res.status(200).json({

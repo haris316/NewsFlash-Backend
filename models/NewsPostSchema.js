@@ -36,6 +36,6 @@ const NewsPostSchema = new mongoose.Schema({
   }
 });
 
-const NewsPostModel = new mongoose.model("news_post", NewsPostSchema);
+// const NewsPostModel = new mongoose.model("news_post", NewsPostSchema);
 
-module.exports = NewsPostModel;
+module.exports = NewsPostSchema;
