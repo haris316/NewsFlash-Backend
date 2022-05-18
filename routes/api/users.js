@@ -12,6 +12,7 @@ const validateLoginInput = require("../../validation/login");
 const userModel = require("../../models/User");
 const passport = require("passport");
 const companyModel = require("../../models/Company");
+const articleModel = require("../../models/NewsArticle");
 
 router.post("/getprofile", (req, res) => {
   jwt.verify(req.body.token, keys.secretOrKey, function (err, decoded) {
@@ -170,24 +171,103 @@ router.post("/removefrompins", (req, res) => {
 });
 
 
-//Upvote By Email
-// router.post("/upvote", (req, res) => {
-//   userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
-//     if (user) {
-//       if (user.pins.indexOf(req.body.article) !== -1) user.pins.splice(user.pins.indexOf(req.body.article), 1);
-//       user.save();
-//       return res.status(200).json({
-//         success: true,
-//         error: false,
-//         message: "Post Unpinned Successfully",
-//       });
-//     } else {
-//       return res
-//         .status(200)
-//         .json({ success: false, message: "Unable to fetch profile" });
-//     }
-//   });
-// });
+// Upvote By ID
+router.post("/upvote", (req, res) => {
+  articleModel.findOneById(req.body.articleid).then((article) => {
+    if (article) {
+      if (article.upvote.indexOf(req.body.profileid) !== -1) article.upvote.push(req.body.profileid);
+      else return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Already UpVoted",
+      });
+      article.save();
+      return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post UpVoted Successfully",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch article" });
+    }
+  });
+});
+
+
+// Upvote Remove By ID
+router.post("/removefromupvote", (req, res) => {
+  articleModel.findOneById(req.body.articleid).then((article) => {
+    if (article) {
+      if (article.upvote.indexOf(req.body.profileid) !== -1) return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Already Removed from UpVoted",
+      });
+      else article.upvote.splice(article.upvote.indexOf(req.body.profileid), 1);
+      article.save();
+      return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Removed from UpVoted Successfully",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch article" });
+    }
+  });
+});
+
+// downvote By ID
+router.post("/downvote", (req, res) => {
+  articleModel.findOneById(req.body.articleid).then((article) => {
+    if (article) {
+      if (article.downvote.indexOf(req.body.profileid) !== -1) article.downvote.push(req.body.profileid);
+      else return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Already downVoted",
+      });
+      article.save();
+      return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post downVoted Successfully",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch article" });
+    }
+  });
+});
+
+
+// downvote remove By ID
+router.post("/removefromdownvote", (req, res) => {
+  articleModel.findOneById(req.body.articleid).then((article) => {
+    if (article) {
+      if (article.downvote.indexOf(req.body.profileid) !== -1) return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Already Removed from downVoted",
+      });
+      else article.downvote.splice(article.downvote.indexOf(req.body.profileid), 1);
+      article.save();
+      return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Removed from downVoted Successfully",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch article" });
+    }
+  });
+});
 
 
 //Get Newstand By Email

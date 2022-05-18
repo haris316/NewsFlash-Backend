@@ -17,6 +17,16 @@ const NewsArticleSchema = new mongoose.Schema({
         required: false,
         default: [],
     },
+    upvote: {
+        type: [String],
+        default: [],
+        required: false,
+    },
+    downvote: {
+        type: [String],
+        default: [],
+        required: false,
+    },
     is_deleted: {
         type: Boolean,
         default: false,
