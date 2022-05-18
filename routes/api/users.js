@@ -173,7 +173,7 @@ router.post("/removefrompins", (req, res) => {
 
 // Upvote By ID
 router.post("/upvote", (req, res) => {
-  articleModel.findOneById(req.body.articleid).then((article) => {
+  articleModel.findById(req.body.articleid).then((article) => {
     if (article) {
       if (article.upvote.indexOf(req.body.profileid) !== -1) article.upvote.push(req.body.profileid);
       else return res.status(200).json({
@@ -198,7 +198,7 @@ router.post("/upvote", (req, res) => {
 
 // Upvote Remove By ID
 router.post("/removefromupvote", (req, res) => {
-  articleModel.findOneById(req.body.articleid).then((article) => {
+  articleModel.findById(req.body.articleid).then((article) => {
     if (article) {
       if (article.upvote.indexOf(req.body.profileid) !== -1) return res.status(200).json({
         success: true,
@@ -222,7 +222,7 @@ router.post("/removefromupvote", (req, res) => {
 
 // downvote By ID
 router.post("/downvote", (req, res) => {
-  articleModel.findOneById(req.body.articleid).then((article) => {
+  articleModel.findById(req.body.articleid).then((article) => {
     if (article) {
       if (article.downvote.indexOf(req.body.profileid) !== -1) article.downvote.push(req.body.profileid);
       else return res.status(200).json({
@@ -247,7 +247,7 @@ router.post("/downvote", (req, res) => {
 
 // downvote remove By ID
 router.post("/removefromdownvote", (req, res) => {
-  articleModel.findOneById(req.body.articleid).then((article) => {
+  articleModel.findById(req.body.articleid).then((article) => {
     if (article) {
       if (article.downvote.indexOf(req.body.profileid) !== -1) return res.status(200).json({
         success: true,
