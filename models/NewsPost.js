@@ -10,6 +10,11 @@ const NewsPostSchema = new mongoose.Schema({
     ref: "UserSchema",
     required: true,
   },
+  opinion_text: {
+    type: String,
+    required: false,
+    default: ""
+  },
   article: {
     type: NewsArticleSchema,
     required: true,

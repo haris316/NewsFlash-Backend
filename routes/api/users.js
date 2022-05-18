@@ -131,6 +131,64 @@ router.post("/getpins", (req, res) => {
   });
 });
 
+//Add Pins By Email
+router.post("/addtopins", (req, res) => {
+  userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+    if (user) {
+      if (user.pins.indexOf(req.body.article) === -1) user.pins.push(req.body.article)
+      user.save();
+      return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Pinned Successfully",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch profile" });
+    }
+  });
+});
+
+//Remove Pins By Email
+router.post("/removefrompins", (req, res) => {
+  userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+    if (user) {
+      if (user.pins.indexOf(req.body.article) !== -1) user.pins.splice(user.pins.indexOf(req.body.article), 1);
+      user.save();
+      return res.status(200).json({
+        success: true,
+        error: false,
+        message: "Post Unpinned Successfully",
+      });
+    } else {
+      return res
+        .status(200)
+        .json({ success: false, message: "Unable to fetch profile" });
+    }
+  });
+});
+
+
+//Upvote By Email
+// router.post("/upvote", (req, res) => {
+//   userModel.findOne({ email: req.body.email, is_deleted: false }).then((user) => {
+//     if (user) {
+//       if (user.pins.indexOf(req.body.article) !== -1) user.pins.splice(user.pins.indexOf(req.body.article), 1);
+//       user.save();
+//       return res.status(200).json({
+//         success: true,
+//         error: false,
+//         message: "Post Unpinned Successfully",
+//       });
+//     } else {
+//       return res
+//         .status(200)
+//         .json({ success: false, message: "Unable to fetch profile" });
+//     }
+//   });
+// });
+
 
 //Get Newstand By Email
 router.post("/getnewstand", (req, res) => {
